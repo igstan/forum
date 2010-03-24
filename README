@@ -13,3 +13,5 @@ STEPS TOWARDS THE PURPOSE
 The first step for the moment is making sure the interested developers are able
 to get a copy of the central source control repository. Instructions are in the
 HOWTO-GIT file.
+
+Second step: being able to run the automated tests. See HOWTO-TESTS for details.
