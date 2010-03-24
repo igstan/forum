@@ -1,0 +1,42 @@
+In order to run the automated tests, first you must have intall PHPUnit
+(http://www.phpunit.de/). This can be easily achieved using the pear command:
+
+    pear channel-discover pear.phpunit.de
+    pear channel-discover pear.symfony-project.com
+    pear install --alldeps phpunit/PHPUnit
+
+On some operating systems, you may need to log in as root to execute the last
+command:
+
+    sudo pear install --alldeps phpunit/PHPUnit
+
+Next, cd to the "tests" directory and execute phpunit inside that directory:
+
+    phpunit
+
+The resulted output should look similar to this:
+
+    PHPUnit 3.4.11 by Sebastian Bergmann.
+
+    .F
+
+    Time: 0 seconds, Memory: 8.50Mb
+
+    There was 1 failure:
+
+    1) HelloWorldTest::failingTest
+    Failed asserting that <boolean:false> is true.
+
+    FooTest.php:18
+
+    FAILURES!
+    Tests: 2, Assertions: 2, Failures: 1.
+
+    Generating code coverage report, this may take a moment.
+
+
+The phpunit command will auto-magically read the phpunit.xml file which can be
+found in the tests directory and execute the tests accordingly to those
+configurations.
+
+If you're able to run the tests, then you're ready for real development.
