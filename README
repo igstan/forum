@@ -1,0 +1,15 @@
+PURPOSE
+=======
+This project aims at building a brand new forum software for the Romanian
+PHP community (http://www.phpromania.net/forum/).
+
+For the moment though, the project is intended mainly as a common playground
+for the above mentioned developers. A playground for testing and learning good
+software development practices.
+
+
+STEPS TOWARDS THE PURPOSE
+========================
+The first step for the moment is making sure the interested developers are able
+to get a copy of the central source control repository. Instructions are in the
+HOWTO-GIT file.
