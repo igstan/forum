@@ -15,3 +15,5 @@ to get a copy of the central source control repository. Instructions are in the
 HOWTO-GIT file.
 
 Second step: being able to run the automated tests. See HOWTO-TESTS for details.
+Also, check out the problem found in tests/Forum/MathTest.php. It is a simple
+exercise for getting you started with unit testing.
