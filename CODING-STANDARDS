@@ -294,6 +294,9 @@ empty lines are used for grouping them visually:
 ### Class Declaration
 Classes must be named according to this project's naming conventions.
 
+Between the class declaration and the previous statements, be them "namespace"
+or "use" statements, two blank lines must be kept.
+
 The brace should always be written on the line underneath the class name.
 
 A class MAY have a documentation block that conforms to the PHPDocumentor
