@@ -109,7 +109,7 @@ class MathTest extends PHPUnit_Framework_TestCase
      */
     public function additionBetweenMultiDigitNumbers()
     {
-        $this->assertEquals(579, "123 + 456");
+        $this->assertEquals(579, Math\evaluate("123 + 456"));
     }
 
     /**
