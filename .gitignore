@@ -1,1 +1,4 @@
 tests/reports
+*.swp
+*~
+thumbs.db
