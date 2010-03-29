@@ -12,7 +12,7 @@ command:
 
 Next, cd to the "tests" directory and execute phpunit inside that directory:
 
-    phpunit
+    phpunit HelloWorldTest
 
 The resulted output should look similar to this:
 
