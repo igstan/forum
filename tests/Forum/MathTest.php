@@ -2,7 +2,7 @@
 /**
  * You have to implement a simple mathematical expression evaluator. Given a
  * mathematical expression in the form of a string, like "3 * 2 + 5", your
- * function should returned the computed result of the expression, which is 11
+ * function should return the computed result of the expression, which is 11
  * in the above case.
  *
  * Below you'll find test cases that will incrementally require more features
