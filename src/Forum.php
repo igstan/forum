@@ -6,6 +6,7 @@
 
 namespace Forum;
 
+
 class Forum
 {
     private $dataStore;
