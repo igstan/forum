@@ -13,8 +13,13 @@ class ForumTest extends PHPUnit_Framework_TestCase
     public function getTopis()
     {
         $topics = array('Topic #1', 'Topic #2');
-        $dataStore = new StdClass;
-        $forum = new Forum($topics, $dataStore);
+
+        $dataStore = $this->getMock('StdClass', array('fetchTopics'));
+        $dataStore->expects($this->any())
+                  ->method('fetchTopics')
+                  ->will($this->returnValue($topics));
+
+        $forum = new Forum($dataStore);
 
         $this->assertEquals($topics, $forum->getTopics());
     }
@@ -24,7 +29,6 @@ class ForumTest extends PHPUnit_Framework_TestCase
      */
     public function createTopic()
     {
-        $existingTopics = array();
         $topicTitle = 'First topic';
         $firstPost = 'First post';
 
@@ -33,7 +37,7 @@ class ForumTest extends PHPUnit_Framework_TestCase
                   ->method('saveTopic')
                   ->with($this->equalTo($topicTitle), $this->equalTo($firstPost));
 
-        $forum = new Forum($existingTopics, $dataStore);
+        $forum = new Forum($dataStore);
         $forum->createTopic($topicTitle, $firstPost);
     }
 }

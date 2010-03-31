@@ -4,20 +4,17 @@ namespace Forum;
 
 class Forum
 {
-    private $topics;
-
     private $dataStore;
 
 
-    public function __construct($topics, $dataStore)
+    public function __construct($dataStore)
     {
-        $this->topics = $topics;
         $this->dataStore = $dataStore;
     }
 
     public function getTopics()
     {
-        return $this->topics;
+        return $this->dataStore->fetchTopics();
     }
 
     public function createTopic($topicTitle, $firstPost)
