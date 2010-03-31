@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit>
-    <php>
-        <ini name="include_path" value="../src"/>
-    </php>
-
+<phpunit bootstrap="bootstrap.php">
     <testsuite name="PHP Forum">
         <directory>./</directory>
     </testsuite>
