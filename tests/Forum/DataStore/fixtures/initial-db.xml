@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dataset>
+  <table name="posts">
+   	<column>id</column>
+    <column>content</column>
+    <row>
+      <value>1</value>
+      <value>Post #1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Post #2</value>
+    </row>
+  </table>
+</dataset>
