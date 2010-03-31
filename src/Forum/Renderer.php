@@ -24,4 +24,14 @@ class Renderer
 
         return ob_get_clean();
     }
+
+    public function renderTopic($topic)
+    {
+        ob_start();
+
+        $posts = $topic->getPosts();
+        require $this->templatesDir . '/topic.phtml';
+
+        return ob_get_clean();
+    }
 }
