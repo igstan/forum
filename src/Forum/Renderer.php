@@ -17,20 +17,24 @@ class Renderer
 
     public function renderTopicList()
     {
-        ob_start();
-
-        $topics = $this->forum->getTopics();
-        require $this->templatesDir . '/topic-list.phtml';
-
-        return ob_get_clean();
+        return $this->renderTemplate('topic-list.phtml', array(
+            'topics' => $this->forum->getTopics(),
+        ));
     }
 
     public function renderTopic($topic)
     {
+        return $this->renderTemplate('topic.phtml', array(
+            'posts' => $topic->getPosts(),
+        ));
+    }
+
+    protected function renderTemplate($templatePath, $data)
+    {
         ob_start();
 
-        $posts = $topic->getPosts();
-        require $this->templatesDir . '/topic.phtml';
+        extract($data);
+        require $this->templatesDir . '/' . $templatePath;
 
         return ob_get_clean();
     }
