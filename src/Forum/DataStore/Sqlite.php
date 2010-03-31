@@ -19,6 +19,9 @@ class Sqlite
 
     public function fetchPosts()
     {
-        return $this->pdo->query('SELECT * FROM posts')->fetchAll(\PDO::FETCH_ASSOC);
+        $posts = $this->pdo->query('SELECT * FROM posts')
+                           ->fetchAll(\PDO::FETCH_ASSOC);
+
+        return $posts;
     }
 }

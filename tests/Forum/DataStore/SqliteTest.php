@@ -16,6 +16,7 @@ class SqliteTest extends \PHPUnit_Extensions_Database_TestCase
 {
     private static $databasePath;
 
+
     public static function setUpBeforeClass()
     {
         static::$databasePath = __DIR__ . '/fixtures/db.sqlite';
